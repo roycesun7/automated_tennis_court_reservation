@@ -1,0 +1,11 @@
+.env
+.env.tmp
+*.tmp
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+*.html
+*.png
+cron.log
+
