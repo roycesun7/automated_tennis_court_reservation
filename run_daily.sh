@@ -1,8 +1,9 @@
 #!/bin/bash
 
-cd /Users/yashsamtani2/penntennisscraper
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-/Users/yashsamtani2/anaconda3/bin/python reserve_courts.py >> /Users/yashsamtani2/penntennisscraper/cron.log 2>&1
+cd "$SCRIPT_DIR"
 
-echo "Run completed at $(date)" >> /Users/yashsamtani2/penntennisscraper/cron.log
+python reserve_courts.py >> "$SCRIPT_DIR/cron.log" 2>&1
 
+echo "Run completed at $(date)" >> "$SCRIPT_DIR/cron.log"
